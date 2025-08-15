@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="SafeKid - Advanced child safety technology that prevents hot car tragedies. Get instant alerts when your child is detected in the vehicle. Trusted by 10,000+ families." />
+    <meta name="keywords" content="child safety, car safety, hot car prevention, family safety, vehicle monitoring" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>SafeKid - Never Forget Your Child | Award-Winning Safety Technology</title>
+    <script type="module" crossorigin src="./assets/index-BGnIelPm.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BQhYUctQ.css">
+  </head>
+  <body>
+    <!-- Skip Navigation Link -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Trust Badge -->
+    <div class="trust-badge" role="banner" aria-label="Safety credentials">
+      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12L11 14L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span>Trusted by 10,000+ families — pediatrician-approved</span>
+    </div>
+
+    <div id="app">
+      <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="container">
+            <div class="hero-content">
+              <div class="hero-text">
+                <div class="badge badge-success" role="img" aria-label="Award winner">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9C6 7.34 7.34 6 9 6C10.66 6 12 7.34 12 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 9C12 7.34 13.34 6 15 6C16.66 6 18 7.34 18 9C18 10.66 16.66 12 15 12H9C7.34 12 6 10.66 6 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12V17L12 15L15 17V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Award-winning Safety Technology
+                </div>
+                
+                <h1 id="hero-title">SafeKid</h1>
+                <p class="subtitle">Never forget your child in the car again.</p>
+                <p class="description">Advanced technology that saves lives. Get instant alerts and peace of mind every time you drive.</p>
+                
+                <!-- Safety Statistics -->
+                <div class="stats" role="group" aria-labelledby="stats-heading">
+                  <h2 id="stats-heading" class="sr-only">Safety Performance Statistics</h2>
+                  <div class="stat-item">
+                    <span class="stat-number" aria-label="One hundred percent">100%</span>
+                    <span class="stat-label">High detection accuracy</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number" aria-label="Less than thirty seconds">&lt;30s</span>
+                    <span class="stat-label">Alert response time</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number" aria-label="Twenty four seven">24/7</span>
+                    <span class="stat-label">Continuous monitoring</span>
+                  </div>
+                </div>
+                
+                <div class="hero-actions">
+                  <button class="btn btn-primary" type="button" aria-label="Download SafeKid app">
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Start Protecting Your Family
+                  </button>
+                  <button class="btn btn-secondary" type="button" aria-label="Watch SafeKid demonstration">
+                    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                    </svg>
+                    See SafeKid in Action
+                  </button>
+                </div>
+              </div>
+              
+              <div class="hero-visual">
+                <!-- Phone Mockup -->
+                <div class="phone-mockup" role="img" aria-label="SafeKid mobile app showing all safe status with 72 degree temperature reading">
+                  <div class="phone-screen">
+                    <div class="status-indicator" aria-hidden="true"></div>
+                    
+                    <!-- Live Status Region -->
+                    <div id="vehicle-status" class="status-live" role="status" aria-live="polite" aria-atomic="true">
+                      <h3>All Safe</h3>
+                      <p>No children detected in vehicle</p>
+                    </div>
+                    
+                    <div class="temp-reading" aria-label="Current temperature seventy two degrees Fahrenheit">
+                      <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 4V10.54C15.19 11.29 16 12.56 16 14C16 16.21 14.21 18 12 18C9.79 18 8 16.21 8 14C8 12.56 8.81 11.29 10 10.54V4C10 2.9 10.9 2 12 2C13.1 2 14 2.9 14 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <span>72°F</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" aria-labelledby="features-heading">
+          <div class="container">
+            <header class="section-header">
+              <h2 id="features-heading">Why Choose SafeKid?</h2>
+              <p>Advanced safety features designed by parents, for parents</p>
+            </header>
+            
+            <div class="features-grid">
+              <article class="feature-card priority card" role="article" aria-labelledby="feature-1-title" tabindex="0">
+                <span class="badge badge-danger" aria-label="Critical priority feature">Critical</span>
+                <div class="feature-icon" aria-hidden="true">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.29 3.86L1.82 18C1.64486 18.3024 1.55675 18.6453 1.56584 18.9928C1.57494 19.3403 1.68097 19.6781 1.87111 19.9725C2.06125 20.2669 2.32795 20.5068 2.64462 20.6675C2.96129 20.8281 3.31474 20.9034 3.67 20.89H20.67C21.0253 20.9034 21.3787 20.8281 21.6954 20.6675C22.0121 20.5068 22.2788 20.2669 22.4689 19.9725C22.659 19.6781 22.7651 19.3403 22.7742 18.9928C22.7833 18.6453 22.6951 18.3024 22.52 18L14.05 3.86C13.8613 3.56611 13.5937 3.3312 13.2763 3.17675C12.9588 3.02229 12.6031 2.94360 12.24 2.94360C11.8769 2.94360 11.5212 3.02229 11.2037 3.17675C10.8863 3.3312 10.6187 3.56611 10.43 3.86H10.29Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 9V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 id="feature-1-title">Instant Alerts</h3>
+                <p>Get immediate notifications when your child is detected in the vehicle after you've left.</p>
+                <div class="feature-stats">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" fill="currentColor"/>
+                  </svg>
+                  Less than 30 seconds response
+                </div>
+              </article>
+
+              <article class="feature-card card" role="article" aria-labelledby="feature-2-title" tabindex="0">
+                <div class="feature-icon" aria-hidden="true">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M8 21L12 17L16 21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 17V13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 id="feature-2-title">Smart Detection</h3>
+                <p>Advanced sensors and AI technology ensure accurate detection every time.</p>
+                <div class="feature-stats">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  High detection accuracy
+                </div>
+              </article>
+
+              <article class="feature-card card" role="article" aria-labelledby="feature-3-title" tabindex="0">
+                <div class="feature-icon" aria-hidden="true">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="6" width="18" height="12" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M23 13L23 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 10L7 12L13 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 id="feature-3-title">Long Battery Life</h3>
+                <p>Up to 6 months of battery life with low-power consumption technology.</p>
+                <div class="feature-stats">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                    <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  6 months battery life
+                </div>
+              </article>
+
+              <article class="feature-card emergency card" role="article" aria-labelledby="feature-4-title" tabindex="0">
+                <span class="badge badge-warning" aria-label="Emergency feature">Emergency</span>
+                <div class="feature-icon" aria-hidden="true">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 4V10.54C15.19 11.29 16 12.56 16 14C16 16.21 14.21 18 12 18C9.79 18 8 16.21 8 14C8 12.56 8.81 11.29 10 10.54V4C10 2.9 10.9 2 12 2C13.1 2 14 2.9 14 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h3 id="feature-4-title">Temperature Monitor</h3>
+                <p>Real-time temperature monitoring with automatic emergency alerts.</p>
+                <div class="feature-stats">
+                  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 4V10.54C15.19 11.29 16 12.56 16 14C16 16.21 14.21 18 12 18C9.79 18 8 16.21 8 14C8 12.56 8.81 11.29 10 10.54V4C10 2.9 10.9 2 12 2C13.1 2 14 2.9 14 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Real-time monitoring
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="trust-section" aria-labelledby="trust-heading">
+          <div class="container">
+            <header class="section-header">
+              <h2 id="trust-heading">Trusted by Safety Experts</h2>
+              <p>Recognized and recommended by leading safety organizations</p>
+            </header>
+            
+            <div class="trust-grid">
+              <article class="trust-item card" role="article" aria-labelledby="trust-1-title" tabindex="0">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 12H18L15 21L9 3L6 12H2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h4 id="trust-1-title">Pediatrician Approved</h4>
+                <p>Recommended by child safety specialists and medical professionals</p>
+              </article>
+
+              <article class="trust-item card" role="article" aria-labelledby="trust-2-title" tabindex="0">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 9C6 7.34 7.34 6 9 6C10.66 6 12 7.34 12 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 9C12 7.34 13.34 6 15 6C16.66 6 18 7.34 18 9C18 10.66 16.66 12 15 12H9C7.34 12 6 10.66 6 9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 12V17L12 15L15 17V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h4 id="trust-2-title">Safety Award Winner</h4>
+                <p>2024 Child Safety Innovation Award recipient</p>
+              </article>
+
+              <article class="trust-item card" role="article" aria-labelledby="trust-3-title" tabindex="0">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
+                    <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <h4 id="trust-3-title">Privacy First</h4>
+                <p>Your data stays secure and private with end-to-end encryption</p>
+              </article>
+
+              <article class="trust-item card" role="article" aria-labelledby="trust-4-title" tabindex="0">
+                <div class="trust-icon" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="13,2 3,14 12,14 11,22 21,10 12,10" fill="currentColor"/>
+                  </svg>
+                </div>
+                <h4 id="trust-4-title">Emergency Response</h4>
+                <p>Connects to local emergency services for rapid response</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download" aria-labelledby="download-heading">
+          <div class="container">
+            <header class="section-header">
+              <h2 id="download-heading">Download SafeKid Today</h2>
+              <p>Available for iOS and Android. Start protecting your family now.</p>
+            </header>
+            
+            <div class="download-buttons">
+              <a href="#" class="store-button" role="button" aria-label="Download SafeKid from the App Store">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.09997 22C7.78997 22.05 6.79997 20.68 5.95997 19.47C4.24997 17 2.93997 12.45 4.69997 9.39C5.56997 7.87 7.12997 6.91 8.81997 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.54 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="store-text">
+                  <span class="download-text">Download on the</span>
+                  <span class="store-name">App Store</span>
+                </div>
+              </a>
+
+              <a href="#" class="store-button" role="button" aria-label="Download SafeKid from Google Play">
+                <div class="store-icon" aria-hidden="true">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.609 1.814L13.792 12L3.61 22.186C3.63 22.186 3.649 22.186 3.668 22.186C4.284 22.186 5.152 21.849 6.085 21.236L6.097 21.229L17.156 15.126L13.792 12Z" fill="currentColor"/>
+                    <path d="M20.69 10.413L20.69 10.413L17.157 8.874L13.615 12.177L17.156 15.126L20.69 13.587C21.438 13.204 21.868 12.622 21.868 12C21.868 11.378 21.438 10.796 20.69 10.413Z" fill="currentColor"/>
+                    <path d="M3.609 1.814C3.015 2.134 2.651 2.729 2.651 3.502V20.498C2.651 21.271 3.015 21.866 3.609 22.186L13.792 12L3.609 1.814Z" fill="currentColor"/>
+                    <path d="M13.615 11.823L17.157 8.874L6.097 2.771C5.164 2.158 4.296 1.821 3.68 1.821C3.661 1.821 3.642 1.821 3.622 1.821L13.615 11.823Z" fill="currentColor"/>
+                  </svg>
+                </div>
+                <div class="store-text">
+                  <span class="download-text">Get it on</span>
+                  <span class="store-name">Google Play</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Live Regions for Screen Readers -->
+    <div aria-live="polite" aria-atomic="true" class="live-region" id="status-updates"></div>
+    <div aria-live="assertive" aria-atomic="true" class="live-region" id="emergency-alerts"></div>
+
+  </body>
+</html>
