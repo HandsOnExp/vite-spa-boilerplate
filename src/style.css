@@ -541,7 +541,7 @@ body {
   padding: 0 var(--space-6) 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding-bottom 0.3s ease;
+  transition: max-height 0.3s ease, padding-bottom 0.3s ease, opacity 0.2s ease;
   opacity: 0;
 }
 
@@ -554,7 +554,6 @@ body {
 }
 
 .faq-item[data-expanded="true"] .faq-answer {
-  max-height: 300px;
   padding-bottom: var(--space-6);
   opacity: 1;
   transition: max-height 0.3s ease, padding-bottom 0.3s ease, opacity 0.2s ease 0.1s;

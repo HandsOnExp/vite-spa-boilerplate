@@ -370,12 +370,20 @@ class SafeKidApp {
     
     // Toggle data attribute for CSS styling
     if (isExpanded) {
+      // Collapsing - remove inline max-height and data attribute
+      answer.style.maxHeight = '0'
       faqItem.removeAttribute('data-expanded')
     } else {
+      // Expanding - set data attribute first, then calculate and set height
       faqItem.setAttribute('data-expanded', 'true')
-      // Set a more accurate max-height based on content
+      // Need to briefly show content to measure its height
+      answer.style.maxHeight = 'none'
       const contentHeight = answer.scrollHeight
-      answer.style.maxHeight = contentHeight + 20 + 'px' // Add some buffer
+      answer.style.maxHeight = '0' // Reset to 0 for animation
+      // Force reflow and then set target height
+      requestAnimationFrame(() => {
+        answer.style.maxHeight = contentHeight + 20 + 'px'
+      })
     }
     
     // Announce state change to screen readers
