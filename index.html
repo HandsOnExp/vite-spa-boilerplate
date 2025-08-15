@@ -4,36 +4,82 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite SPA Boilerplate</title>
+    <title>SafeKid - Never Forget Your Child</title>
   </head>
   <body>
     <div id="app">
-      <header>
-        <h1>🚀 Vite SPA Boilerplate</h1>
-        <p>A modern single page application built with Vite</p>
-      </header>
-      
       <main>
         <section class="hero">
-          <h2>Welcome to your new project!</h2>
-          <p>Start building your amazing single page application.</p>
-          <button id="counter-btn">Count: <span id="counter">0</span></button>
+          <div class="hero-content">
+            <h1 class="hero-title">SafeKid</h1>
+            <p class="hero-subtitle">Never forget your child in the car again.</p>
+            <p class="hero-description">Advanced technology that saves lives. Get instant alerts and peace of mind every time you drive.</p>
+            <div class="hero-buttons">
+              <button class="btn-primary">Download Now</button>
+              <button class="btn-secondary">Watch Demo</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="phone-mockup">
+              <div class="phone-screen">
+                <div class="app-preview">
+                  <div class="status-indicator safe"></div>
+                  <h3>All Safe</h3>
+                  <p>No children detected in vehicle</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
-        
+
         <section class="features">
-          <h3>Features</h3>
-          <ul>
-            <li>⚡ Lightning fast development with Vite</li>
-            <li>🔥 Hot Module Replacement</li>
-            <li>📦 Optimized production builds</li>
-            <li>🛠️ Modern JavaScript support</li>
-          </ul>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🚨</div>
+              <h3>Instant Alerts</h3>
+              <p>Get immediate notifications when your child is detected in the vehicle after you've left.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📱</div>
+              <h3>Smart Detection</h3>
+              <p>Advanced sensors and AI technology ensure accurate detection every time.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔋</div>
+              <h3>Long Battery</h3>
+              <p>Up to 6 months of battery life with low-power consumption technology.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌡️</div>
+              <h3>Temperature Monitor</h3>
+              <p>Real-time temperature monitoring with automatic emergency alerts.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="download">
+          <div class="download-content">
+            <h2>Download SafeKid Today</h2>
+            <p>Available for iOS and Android. Start protecting your family now.</p>
+            <div class="download-buttons">
+              <button class="store-button ios">
+                <div class="store-icon">📱</div>
+                <div class="store-text">
+                  <span class="download-text">Download on the</span>
+                  <span class="store-name">App Store</span>
+                </div>
+              </button>
+              <button class="store-button android">
+                <div class="store-icon">🤖</div>
+                <div class="store-text">
+                  <span class="download-text">Get it on</span>
+                  <span class="store-name">Google Play</span>
+                </div>
+              </button>
+            </div>
+          </div>
         </section>
       </main>
-      
-      <footer>
-        <p>Edit <code>src/main.js</code> to get started</p>
-      </footer>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
