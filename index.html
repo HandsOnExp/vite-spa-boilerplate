@@ -9,50 +9,155 @@
   <body>
     <div id="app">
       <main>
+        <!-- Safety Badge -->
+        <div class="safety-badge">
+          <div class="badge-icon">🛡️</div>
+          <span>Trusted by 10,000+ families</span>
+        </div>
+
         <section class="hero">
           <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-text">🏆 Award-winning Safety Technology</span>
+            </div>
             <h1 class="hero-title">SafeKid</h1>
             <p class="hero-subtitle">Never forget your child in the car again.</p>
             <p class="hero-description">Advanced technology that saves lives. Get instant alerts and peace of mind every time you drive.</p>
+            
+            <!-- Safety Stats -->
+            <div class="safety-stats">
+              <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Detection Rate</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">&lt;30s</div>
+                <div class="stat-label">Alert Time</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Monitoring</div>
+              </div>
+            </div>
+            
             <div class="hero-buttons">
-              <button class="btn-primary">Download Now</button>
-              <button class="btn-secondary">Watch Demo</button>
+              <button class="btn-primary">
+                <span class="btn-icon">📱</span>
+                Download Now
+              </button>
+              <button class="btn-secondary">
+                <span class="btn-icon">▶️</span>
+                Watch Demo
+              </button>
             </div>
           </div>
           <div class="hero-visual">
             <div class="phone-mockup">
+              <div class="notification-badge">
+                <span>🔔</span>
+                <span>Live Monitoring</span>
+              </div>
               <div class="phone-screen">
                 <div class="app-preview">
-                  <div class="status-indicator safe"></div>
+                  <div class="app-header">
+                    <div class="signal-strength">
+                      <div class="signal-bar"></div>
+                      <div class="signal-bar"></div>
+                      <div class="signal-bar"></div>
+                      <div class="signal-bar"></div>
+                    </div>
+                    <div class="time">2:34 PM</div>
+                    <div class="battery">100%</div>
+                  </div>
+                  <div class="status-indicator safe">
+                    <div class="checkmark">✓</div>
+                  </div>
                   <h3>All Safe</h3>
                   <p>No children detected in vehicle</p>
+                  <div class="temp-reading">
+                    <span class="temp-icon">🌡️</span>
+                    <span>72°F</span>
+                  </div>
                 </div>
               </div>
+            </div>
+            <!-- Floating safety icons -->
+            <div class="floating-icons">
+              <div class="floating-icon" style="--delay: 0s">🛡️</div>
+              <div class="floating-icon" style="--delay: 2s">🚨</div>
+              <div class="floating-icon" style="--delay: 4s">📱</div>
             </div>
           </div>
         </section>
 
         <section class="features">
+          <div class="section-header">
+            <h2>Why Choose SafeKid?</h2>
+            <p>Advanced safety features designed by parents, for parents</p>
+          </div>
           <div class="features-grid">
-            <div class="feature-card">
+            <div class="feature-card priority">
               <div class="feature-icon">🚨</div>
+              <div class="priority-badge">Critical</div>
               <h3>Instant Alerts</h3>
               <p>Get immediate notifications when your child is detected in the vehicle after you've left.</p>
+              <div class="feature-stats">
+                <span>⚡ &lt;30 seconds response</span>
+              </div>
             </div>
             <div class="feature-card">
               <div class="feature-icon">📱</div>
               <h3>Smart Detection</h3>
               <p>Advanced sensors and AI technology ensure accurate detection every time.</p>
+              <div class="feature-stats">
+                <span>🎯 99.9% accuracy</span>
+              </div>
             </div>
             <div class="feature-card">
               <div class="feature-icon">🔋</div>
               <h3>Long Battery</h3>
               <p>Up to 6 months of battery life with low-power consumption technology.</p>
+              <div class="feature-stats">
+                <span>⏱️ 6 months battery</span>
+              </div>
             </div>
-            <div class="feature-card">
+            <div class="feature-card emergency">
               <div class="feature-icon">🌡️</div>
+              <div class="emergency-badge">Emergency</div>
               <h3>Temperature Monitor</h3>
               <p>Real-time temperature monitoring with automatic emergency alerts.</p>
+              <div class="feature-stats">
+                <span>🌡️ Real-time monitoring</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Trust Indicators Section -->
+        <section class="trust-section">
+          <div class="trust-content">
+            <h2>Trusted by Safety Experts</h2>
+            <div class="trust-grid">
+              <div class="trust-item">
+                <div class="trust-icon">🏥</div>
+                <h4>Pediatrician Approved</h4>
+                <p>Recommended by child safety specialists</p>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">🏆</div>
+                <h4>Safety Award Winner</h4>
+                <p>2024 Child Safety Innovation Award</p>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">🔐</div>
+                <h4>Privacy First</h4>
+                <p>Your data stays secure and private</p>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">⚡</div>
+                <h4>Emergency Response</h4>
+                <p>Connects to local emergency services</p>
+              </div>
             </div>
           </div>
         </section>

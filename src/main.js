@@ -34,11 +34,27 @@ function setupAnimations() {
   }, observerOptions)
   
   // Observe feature cards
-  document.querySelectorAll('.feature-card').forEach(card => {
+  document.querySelectorAll('.feature-card').forEach((card, index) => {
     card.style.opacity = '0'
     card.style.transform = 'translateY(30px)'
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease'
+    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`
     observer.observe(card)
+  })
+  
+  // Observe trust items
+  document.querySelectorAll('.trust-item').forEach((item, index) => {
+    item.style.opacity = '0'
+    item.style.transform = 'translateY(20px)'
+    item.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`
+    observer.observe(item)
+  })
+  
+  // Observe section headers
+  document.querySelectorAll('.section-header').forEach(header => {
+    header.style.opacity = '0'
+    header.style.transform = 'translateY(20px)'
+    header.style.transition = 'opacity 0.7s ease, transform 0.7s ease'
+    observer.observe(header)
   })
   
   // Observe download section
@@ -177,7 +193,7 @@ function showStoreRedirect(storeName) {
   alert(`🚀 Redirecting to ${storeName}\n\nYou would normally be redirected to the ${storeName} to download SafeKid.\n\nComing soon to both iOS and Android!`)
 }
 
-// Add smooth hover effects to feature cards
+// Add smooth hover effects to feature cards and trust items
 function enhanceFeatureCards() {
   document.querySelectorAll('.feature-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
@@ -188,10 +204,67 @@ function enhanceFeatureCards() {
       card.style.transform = 'translateY(0) scale(1)'
     })
   })
+  
+  // Enhance trust items with subtle hover effects
+  document.querySelectorAll('.trust-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'translateY(-3px) scale(1.01)'
+    })
+    
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'translateY(0) scale(1)'
+    })
+  })
+  
+  // Add dynamic signal strength animation
+  animateSignalBars()
+}
+
+// Animate signal strength bars
+function animateSignalBars() {
+  const signalBars = document.querySelectorAll('.signal-bar')
+  if (signalBars.length > 0) {
+    setInterval(() => {
+      signalBars.forEach((bar, index) => {
+        const delay = index * 100
+        setTimeout(() => {
+          bar.style.opacity = '0.3'
+          setTimeout(() => {
+            bar.style.opacity = '1'
+          }, 200)
+        }, delay)
+      })
+    }, 3000)
+  }
+}
+
+// Add pulsing effect to safety elements
+function addSafetyEffects() {
+  const safetyBadge = document.querySelector('.safety-badge')
+  const notificationBadge = document.querySelector('.notification-badge')
+  
+  if (safetyBadge) {
+    setInterval(() => {
+      safetyBadge.style.transform = 'scale(1.05)'
+      setTimeout(() => {
+        safetyBadge.style.transform = 'scale(1)'
+      }, 200)
+    }, 5000)
+  }
+  
+  if (notificationBadge) {
+    setInterval(() => {
+      notificationBadge.style.transform = 'scale(1.1)'
+      setTimeout(() => {
+        notificationBadge.style.transform = 'scale(1)'
+      }, 300)
+    }, 4000)
+  }
 }
 
 // Start the application
 document.addEventListener('DOMContentLoaded', () => {
   init()
   enhanceFeatureCards()
+  addSafetyEffects()
 })
