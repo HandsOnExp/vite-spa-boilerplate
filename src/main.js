@@ -47,7 +47,7 @@ class SafeKidApp {
       }
       
       // Arrow key navigation for cards
-      if (e.target.matches('.feature-card, .trust-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
         this.handleArrowNavigation(e)
       }
       
@@ -64,7 +64,7 @@ class SafeKidApp {
 
   // Arrow key navigation for card grids
   handleArrowNavigation(e) {
-    const cards = Array.from(document.querySelectorAll('.feature-card, .trust-item'))
+    const cards = Array.from(document.querySelectorAll('.feature-card, .trust-item, .faq-item'))
     const currentIndex = cards.indexOf(e.target)
     let nextIndex = currentIndex
 
@@ -328,13 +328,13 @@ class SafeKidApp {
   setupFocusManagement() {
     // Enhance focus visibility
     document.addEventListener('focusin', (e) => {
-      if (e.target.matches('.feature-card, .trust-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
         e.target.setAttribute('data-focused', 'true')
       }
     })
     
     document.addEventListener('focusout', (e) => {
-      if (e.target.matches('.feature-card, .trust-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
         e.target.removeAttribute('data-focused')
       }
     })
@@ -363,13 +363,13 @@ class SafeKidApp {
     }, observerOptions)
     
     // Observe sections
-    document.querySelectorAll('.features, .trust-section, .download').forEach(section => {
+    document.querySelectorAll('.features, .trust-section, .faq, .download').forEach(section => {
       section.classList.add('fade-in')
       observer.observe(section)
     })
     
     // Observe cards
-    document.querySelectorAll('.feature-card, .trust-item').forEach((card, index) => {
+    document.querySelectorAll('.feature-card, .trust-item, .faq-item').forEach((card, index) => {
       card.classList.add('fade-in')
       card.style.transitionDelay = `${index * 0.1}s`
       observer.observe(card)
@@ -496,7 +496,8 @@ style.textContent = `
   
   /* Enhanced focus styles */
   .feature-card[data-focused="true"],
-  .trust-item[data-focused="true"] {
+  .trust-item[data-focused="true"],
+  .faq-item[data-focused="true"] {
     outline: var(--focus-ring);
     outline-offset: 2px;
   }
