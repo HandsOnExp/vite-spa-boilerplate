@@ -538,10 +538,11 @@ body {
 }
 
 .faq-answer {
-  padding: 0 var(--space-6) var(--space-6);
+  padding: 0 var(--space-6) 0;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.3s ease, padding-bottom 0.3s ease;
+  opacity: 0;
 }
 
 .faq-answer p {
@@ -549,10 +550,14 @@ body {
   line-height: var(--line-height-body);
   font-size: var(--font-size-body);
   margin: 0;
+  padding-top: var(--space-3);
 }
 
 .faq-item[data-expanded="true"] .faq-answer {
-  max-height: 200px;
+  max-height: 300px;
+  padding-bottom: var(--space-6);
+  opacity: 1;
+  transition: max-height 0.3s ease, padding-bottom 0.3s ease, opacity 0.2s ease 0.1s;
 }
 
 .faq-contact {

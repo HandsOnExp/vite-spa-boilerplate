@@ -371,12 +371,11 @@ class SafeKidApp {
     // Toggle data attribute for CSS styling
     if (isExpanded) {
       faqItem.removeAttribute('data-expanded')
-      answer.style.maxHeight = '0'
-      answer.style.paddingBottom = '0'
     } else {
       faqItem.setAttribute('data-expanded', 'true')
-      answer.style.maxHeight = answer.scrollHeight + 'px'
-      answer.style.paddingBottom = 'var(--space-6)'
+      // Set a more accurate max-height based on content
+      const contentHeight = answer.scrollHeight
+      answer.style.maxHeight = contentHeight + 20 + 'px' // Add some buffer
     }
     
     // Announce state change to screen readers
