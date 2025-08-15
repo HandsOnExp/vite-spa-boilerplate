@@ -16,6 +16,7 @@ class SafeKidApp {
     this.setupButtonInteractions()
     this.setupLiveRegions()
     this.setupFocusManagement()
+    this.setupFAQToggles()
     
     // Setup scroll animations (respect reduced motion)
     this.setupScrollAnimations()
@@ -47,7 +48,7 @@ class SafeKidApp {
       }
       
       // Arrow key navigation for cards
-      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-question')) {
         this.handleArrowNavigation(e)
       }
       
@@ -64,7 +65,7 @@ class SafeKidApp {
 
   // Arrow key navigation for card grids
   handleArrowNavigation(e) {
-    const cards = Array.from(document.querySelectorAll('.feature-card, .trust-item, .faq-item'))
+    const cards = Array.from(document.querySelectorAll('.feature-card, .trust-item, .faq-question'))
     const currentIndex = cards.indexOf(e.target)
     let nextIndex = currentIndex
 
@@ -328,16 +329,60 @@ class SafeKidApp {
   setupFocusManagement() {
     // Enhance focus visibility
     document.addEventListener('focusin', (e) => {
-      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-question')) {
         e.target.setAttribute('data-focused', 'true')
       }
     })
     
     document.addEventListener('focusout', (e) => {
-      if (e.target.matches('.feature-card, .trust-item, .faq-item')) {
+      if (e.target.matches('.feature-card, .trust-item, .faq-question')) {
         e.target.removeAttribute('data-focused')
       }
     })
+  }
+
+  // FAQ Toggle Functionality
+  setupFAQToggles() {
+    const faqQuestions = document.querySelectorAll('.faq-question')
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', (e) => {
+        this.toggleFAQ(e.currentTarget)
+      })
+      
+      // Keyboard support
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          this.toggleFAQ(e.currentTarget)
+        }
+      })
+    })
+  }
+
+  toggleFAQ(questionButton) {
+    const faqItem = questionButton.closest('.faq-item')
+    const answer = questionButton.nextElementSibling
+    const isExpanded = questionButton.getAttribute('aria-expanded') === 'true'
+    
+    // Toggle aria-expanded
+    questionButton.setAttribute('aria-expanded', !isExpanded)
+    
+    // Toggle data attribute for CSS styling
+    if (isExpanded) {
+      faqItem.removeAttribute('data-expanded')
+      answer.style.maxHeight = '0'
+      answer.style.paddingBottom = '0'
+    } else {
+      faqItem.setAttribute('data-expanded', 'true')
+      answer.style.maxHeight = answer.scrollHeight + 'px'
+      answer.style.paddingBottom = 'var(--space-6)'
+    }
+    
+    // Announce state change to screen readers
+    const questionText = questionButton.querySelector('span').textContent
+    const state = isExpanded ? 'collapsed' : 'expanded'
+    this.announceToScreenReader(`FAQ item ${questionText} ${state}`)
   }
 
   // Scroll Animations with Intersection Observer
@@ -497,7 +542,7 @@ style.textContent = `
   /* Enhanced focus styles */
   .feature-card[data-focused="true"],
   .trust-item[data-focused="true"],
-  .faq-item[data-focused="true"] {
+  .faq-question[data-focused="true"] {
     outline: var(--focus-ring);
     outline-offset: 2px;
   }

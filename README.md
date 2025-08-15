@@ -110,7 +110,9 @@ lighthouse http://localhost:5173 --view --preset=mobile
 #### ✅ Interaction Tests
 - [ ] **Buttons**: All CTAs work and provide feedback
 - [ ] **Toasts**: Appear, are dismissible, auto-close appropriately
-- [ ] **Cards**: Hover/focus effects work on all cards
+- [ ] **Cards**: Hover/focus effects work on all cards (Features, Trust, FAQ)
+- [ ] **FAQ Navigation**: Arrow keys navigate between FAQ items
+- [ ] **Contact Link**: FAQ contact link has proper focus states
 - [ ] **Live Demo**: Temperature updates every 10 seconds
 - [ ] **Animations**: Respect reduced motion preference
 
@@ -197,6 +199,14 @@ lighthouse http://localhost:5173 --view --preset=mobile
 <article class="card" role="article" aria-labelledby="card-title" tabindex="0">
   <h3 id="card-title">Card Title</h3>
   <p>Card content...</p>
+</article>
+```
+
+### FAQ Component
+```html
+<article class="faq-item card" role="article" aria-labelledby="faq-title">
+  <h3 id="faq-title">Frequently Asked Question?</h3>
+  <p>Professional, concise answer that addresses the question directly.</p>
 </article>
 ```
 
