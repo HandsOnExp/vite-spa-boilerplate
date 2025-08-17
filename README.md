@@ -4,6 +4,7 @@ A modern, accessible, high-performance landing page for SafeKid child safety tec
 
 ## 🎯 Project Overview
 
+SafeKid is A demo of VibeCoding development of Frontend for learning purposes, there is no actual service
 SafeKid is an advanced child safety system that prevents hot car tragedies through real-time monitoring and instant alerts. This landing page showcases the product with a focus on accessibility, performance, and user experience.
 
 ## ✨ Features
